@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OrdenDetalle.Migrations
 {
-    public partial class inicial : Migration
+    public partial class addmigrationinicia : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -59,7 +59,7 @@ namespace OrdenDetalle.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrdenDetalle",
+                name: "OrdenDetalles",
                 columns: table => new
                 {
                     OrdenDetalleId = table.Column<int>(nullable: false)
@@ -73,15 +73,15 @@ namespace OrdenDetalle.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrdenDetalle", x => x.OrdenDetalleId);
+                    table.PrimaryKey("PK_OrdenDetalles", x => x.OrdenDetalleId);
                     table.ForeignKey(
-                        name: "FK_OrdenDetalle_Ordenes_OrdenId",
+                        name: "FK_OrdenDetalles_Ordenes_OrdenId",
                         column: x => x.OrdenId,
                         principalTable: "Ordenes",
                         principalColumn: "OrdenId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrdenDetalle_Productos_ProductoId",
+                        name: "FK_OrdenDetalles_Productos_ProductoId",
                         column: x => x.ProductoId,
                         principalTable: "Productos",
                         principalColumn: "ProductoId",
@@ -89,13 +89,13 @@ namespace OrdenDetalle.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrdenDetalle_OrdenId",
-                table: "OrdenDetalle",
+                name: "IX_OrdenDetalles_OrdenId",
+                table: "OrdenDetalles",
                 column: "OrdenId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrdenDetalle_ProductoId",
-                table: "OrdenDetalle",
+                name: "IX_OrdenDetalles_ProductoId",
+                table: "OrdenDetalles",
                 column: "ProductoId");
 
             migrationBuilder.CreateIndex(
@@ -107,7 +107,7 @@ namespace OrdenDetalle.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrdenDetalle");
+                name: "OrdenDetalles");
 
             migrationBuilder.DropTable(
                 name: "Ordenes");

@@ -41,12 +41,7 @@ namespace OrdenDetalle.BLL
 
             try
             {
-                var Anterior = ProductosBLL.Buscar(productos.ProductoId);
-                foreach (var item in Anterior.OrdenDetalle)
-                {
-                    if (!productos.OrdenDetalle.Exists(d => d.ProductoId == item.ProductoId))
-                        db.Entry(item).State = EntityState.Deleted;
-                }
+      
                 db.Entry(productos).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
@@ -93,9 +88,8 @@ namespace OrdenDetalle.BLL
 
             try
             {
-                productos = db.Productos.Include(x => x.OrdenDetalle)
-                    .Where(x => x.ProductoId == id)
-                    .SingleOrDefault();
+                productos = db.Productos.Find(id);
+
             }
             catch
             {

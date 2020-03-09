@@ -9,8 +9,8 @@ using OrdenDetalle.DAL;
 namespace OrdenDetalle.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200308193400_inicial")]
-    partial class inicial
+    [Migration("20200309063809_add-migration inicia")]
+    partial class addmigrationinicia
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,7 @@ namespace OrdenDetalle.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("OrdenDetalle.Entidades.OrdenDetalle", b =>
+            modelBuilder.Entity("OrdenDetalle.Entidades.OrdenDetalles", b =>
                 {
                     b.Property<int>("OrdenDetalleId")
                         .ValueGeneratedOnAdd()
@@ -68,7 +68,7 @@ namespace OrdenDetalle.Migrations
 
                     b.HasIndex("ProductoId");
 
-                    b.ToTable("OrdenDetalle");
+                    b.ToTable("OrdenDetalles");
                 });
 
             modelBuilder.Entity("OrdenDetalle.Entidades.Ordenes", b =>
@@ -113,10 +113,10 @@ namespace OrdenDetalle.Migrations
                     b.ToTable("Productos");
                 });
 
-            modelBuilder.Entity("OrdenDetalle.Entidades.OrdenDetalle", b =>
+            modelBuilder.Entity("OrdenDetalle.Entidades.OrdenDetalles", b =>
                 {
                     b.HasOne("OrdenDetalle.Entidades.Ordenes", null)
-                        .WithMany("OrdenDetalle")
+                        .WithMany("OrdenDetalles")
                         .HasForeignKey("OrdenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -14,7 +14,7 @@ namespace OrdenDetalle.Entidades
         public decimal Precio { get; set; }
 
         [ForeignKey("ProductoId")]
-        public virtual List<OrdenDetalle> OrdenDetalle { get; set; }
+        public virtual List<OrdenDetalles> OrdenDetalle { get; set; }
 
         public Productos()
         {

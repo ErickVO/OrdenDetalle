@@ -41,12 +41,6 @@ namespace OrdenDetalle.BLL
 
             try
             {
-                var Anterior = ClientesBLL.Buscar(clientes.ClienteId);
-                foreach (var item in Anterior.Orden)
-                {
-                    if (!clientes.Orden.Exists(d => d.ClienteId == item.ClienteId))
-                        db.Entry(item).State = EntityState.Deleted;
-                }
                 db.Entry(clientes).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }

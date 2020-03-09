@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrdenDetalle.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace OrdenDetalle
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroClientes rc = new RegistroClientes();
+            rc.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            RegistroProducto rp = new RegistroProducto();
+            rp.Show();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            RegistroOrden ro = new RegistroOrden();
+            ro.Show();
         }
     }
 }

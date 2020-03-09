@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
     <None Remove="UI\4d8dbd8043ff4fba3405450f2277a198.jpg" />
     <None Remove="UI\fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
   </ItemGroup>
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
     <Resource Include="UI\4d8dbd8043ff4fba3405450f2277a198.jpg" />
     <Resource Include="UI\fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
   </ItemGroup>

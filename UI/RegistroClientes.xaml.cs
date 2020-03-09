@@ -68,7 +68,7 @@ namespace OrdenDetalle.UI
                 if (!ExisteEnBaseDatos())
                 {
                     MessageBox.Show("No existe en la BLL", "ERROR");
-
+                    return;
                 }
                 paso = ClientesBLL.Modificar(clientes);
             }

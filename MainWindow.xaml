@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="500">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="119*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg"/>
+        </Grid.Background>
+        <Menu>
+            <MenuItem Header="Registro Cliente" Click="MenuItem_Click"/>
+            <MenuItem Header="Registro Producto" Click="MenuItem_Click_1"/>
+            <MenuItem Header="Registro Orden" Click="MenuItem_Click_2"/>
+        </Menu>
 
     </Grid>
 </Window>

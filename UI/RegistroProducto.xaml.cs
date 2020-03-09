@@ -65,6 +65,7 @@ namespace OrdenDetalle.UI
                 if (!ExisteBaseDatos())
                 {
                     MessageBox.Show("No existe en la BLL", "ERROR");
+                    return;
 
                 }
                 paso = ProductosBLL.Modificar(productos);
