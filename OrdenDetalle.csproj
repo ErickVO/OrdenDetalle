@@ -10,7 +10,11 @@
   <ItemGroup>
     <None Remove="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
     <None Remove="UI\4d8dbd8043ff4fba3405450f2277a198.jpg" />
+    <None Remove="UI\Add-Folder-icon.png" />
+    <None Remove="UI\bin-white-icon.png" />
     <None Remove="UI\fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
+    <None Remove="UI\Save-as-icon.png" />
+    <None Remove="UI\search-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +28,11 @@
   <ItemGroup>
     <Resource Include="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
     <Resource Include="UI\4d8dbd8043ff4fba3405450f2277a198.jpg" />
+    <Resource Include="UI\Add-Folder-icon.png" />
+    <Resource Include="UI\bin-white-icon.png" />
     <Resource Include="UI\fondo-triangulo-3d-colores-vivos_23-2148392986.jpg" />
+    <Resource Include="UI\Save-as-icon.png" />
+    <Resource Include="UI\search-icon.png" />
   </ItemGroup>
 
 </Project>

@@ -12,12 +12,19 @@
 
             <Style TargetType="Button">
                 <Setter Property="FontWeight" Value="Bold"></Setter>
+                <Setter Property="Foreground" Value="White"/>
+                
             </Style>
 
             <Style TargetType="GroupBox">
                 <Setter Property="FontWeight" Value="Bold"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>           
             </Style>
+
+            <Style TargetType="MenuItem">
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+           
             
         </ResourceDictionary>
     </Application.Resources>

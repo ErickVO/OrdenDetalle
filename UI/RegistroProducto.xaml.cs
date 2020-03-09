@@ -25,6 +25,7 @@ namespace OrdenDetalle.UI
             InitializeComponent();
             this.DataContext = productos;
             IdProductoTextBox.Text = "0";
+            PrecioTextBox.Text = "0";
         }
 
         private void Cargar()
@@ -37,7 +38,7 @@ namespace OrdenDetalle.UI
         {
             IdProductoTextBox.Text = "0";
             NombreTextBox.Text = string.Empty;
-            PrecioTextBox.Text = string.Empty;
+            PrecioTextBox.Text = "0";
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)

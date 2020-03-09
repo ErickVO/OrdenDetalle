@@ -7,17 +7,21 @@
         mc:Ignorable="d"
         Title="RegistroProducto" Height="400" Width="500">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="307*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="fondo-triangulo-3d-colores-vivos_23-2148392986.jpg"/>
         </Grid.Background>
-        <StackPanel Margin="0,21,130,65">
+        <StackPanel Margin="0,21,130,65" Grid.RowSpan="2">
             <Label Content="Id Producto"/>
             <Label Content="Nombre" Margin="0,44"/>
             <Label Content="Precio" Margin="0,0"/>
-            
+
         </StackPanel>
 
-        <StackPanel Margin="0,23,131,117">
+        <StackPanel Margin="0,23,131,40">
             <TextBox x:Name="IdProductoTextBox" Margin="80,1,230,0">
                 <Binding Path="ProductoId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>
@@ -43,17 +47,69 @@
             </TextBox>
         </StackPanel>
 
-        <StackPanel Margin="158,12,207,324">
-            <Button x:Name="BuscarButton" Content="Buscar" Height="38" Width="70" Click="BuscarButton_Click"/>
+        <StackPanel Margin="158,12,207,238">
+            <Button x:Name="BuscarButton" Content="Buscar" Height="38" Width="85" Click="BuscarButton_Click" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="search-icon.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-0.3"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
-        <StackPanel Margin="0,300,130,44">
-            <Button x:Name="NuevoButton" Content="Nuevo" Margin="-200,0,0,0" Height="40" Width="70" Click="NuevoButton_Click"/>
+        <StackPanel Margin="0,300,136,10" Grid.RowSpan="2">
+            <Button x:Name="NuevoButton" Content="Nuevo" Margin="-200,0,0,0" Height="40" Width="81" Click="NuevoButton_Click" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="Add-Folder-icon.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-0.3"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
-        <StackPanel Margin="0,300,130,44">
-            <Button x:Name="GuardarButton" Content="Guardar" Margin="50,0,0,0" Height="40" Width="70" Click="GuardarButton_Click"/>
+        <StackPanel Margin="0,300,130,12" Grid.RowSpan="2">
+            <Button x:Name="GuardarButton" Content="Guardar" Margin="50,0,0,0" Height="40" Width="91" Click="GuardarButton_Click" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="Save-as-icon.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-0.3"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
-        <StackPanel Margin="0,300,130,44">
-            <Button x:Name="EliminarButton" Content="Eliminar" Margin="300,0,0,0" Height="40" Width="70" Click="EliminarButton_Click"/>
+        <StackPanel Margin="0,300,114,11" Grid.RowSpan="2">
+            <Button x:Name="EliminarButton" Content="Eliminar" Margin="300,0,0,0" Height="40" Width="80" Click="EliminarButton_Click" HorizontalContentAlignment="Right">
+                <Button.Background>
+                    <ImageBrush ImageSource="bin-white-icon.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-0.3"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
     </Grid>
